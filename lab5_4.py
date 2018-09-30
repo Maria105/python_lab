@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+#-*-coding: utf-8 -*-
+import math
+
+a=int(input('enter a: '))
+b=int(input('enter b: '))
+c=int(input('enter c: '))
+
+discr = b**2-4*a*c;
+if discr>0:
+    x1=(-b+math.sqrt(discr))/(2*a)
+    x2=(-b-math.sqrt(discr))/(2*a)
+    print('x1=%.2f \nx2=%.2f' % (x1, x2))
+elif discr ==0:
+    x=-b/(2*a)
+    print('x=%.2f'%x)
+else:
+    print('roots are not present')
