@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 
-phrase = str(input ('enter you phrase: '))
+def output() -> str:
+    phrase = str(input ('enter you phrase: '))
+    return (phrase)
 
 def process_phrase ( phrase: str ):
     phrase = phrase.lower()
     forbiddeb = (' ', '.', '?', '!', ':', ';', '-', ',', " ' " )
-    for i in forbidden:
-        phrase = phrase.replase(i, ' ' )
+    for i in forbiddeb:
+        phrase = phrase.replace(i, ' ')
     return phrase
 
 def audit ( phrase: str):
@@ -16,4 +18,5 @@ def audit ( phrase: str):
         print('True')
     else:
         print('False')
-print ( audit ( process_phrase ( ) ) )
+
+print ( audit ( process_phrase (output() ) ) )

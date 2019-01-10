@@ -1,17 +1,25 @@
-#!usr/bin/env python3
+#!usr/bin/env pyhton3
+#-*- codding: utf-8 -*-
 
-def shift_element ( lst: string, k: int ) -> float:
-    """This function shift elements"""
-    k=k%len(lst)
-    k=-k
-    ret = [0]*len(lst)
-    for i in range(len(lst)):
-        if i+k<len(lst) and i+k>=0:
-            ret[i]=lst[i+k]
-        if i+k>=lan(lst):
-            ret[i]=a[i+k-len(lst)]
-        if i+k<0:
-            ret[i]= lst[i+k+len(lst)]
-     return(ret)
+def input_datas() ->list:
+    """This function input datas"""
 
+    line = input('Enter line: ')
+    number = int(input('Enter number: '))
+    return [line, number]
+
+def shift_line(string: list) ->str:
+    """This function shift your line"""
+
+    first_line = string[0][0: string[1]]
+    second_line = string[0][string[1]:]
+    new_line = second_line + first_line
+    return(new_line)
+
+def output(new_line: str) -> str:
+    """This function output dara"""
+
+    print(new_line)
+
+output(shift_line(input_datas()))
 
